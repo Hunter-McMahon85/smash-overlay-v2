@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/smash-overlay-v2/static/css/main.f855e6bc.css",
+    "main.js": "/smash-overlay-v2/static/js/main.c1dc515e.js",
+    "static/js/787.3ebb3b79.chunk.js": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js",
+    "static/media/logo.svg": "/smash-overlay-v2/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/smash-overlay-v2/index.html",
+    "main.f855e6bc.css.map": "/smash-overlay-v2/static/css/main.f855e6bc.css.map",
+    "main.c1dc515e.js.map": "/smash-overlay-v2/static/js/main.c1dc515e.js.map",
+    "787.3ebb3b79.chunk.js.map": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.c1dc515e.js"
+  ]
+}
