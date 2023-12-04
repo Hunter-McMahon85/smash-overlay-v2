@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Names from "./page_components/namesinput";
 
 function Controller() {
-  const [ShowTagSet, setTagSet] = useState(false);
-  const [GM, setGM] = useState("");
-
-  const handleopenTagSet = () => {
-    setTagSet(true);
-  };
-
-  const handlecloseTagSet = () => {
-    setTagSet(false);
-  };
+  let GM = "";
+  
   let p1score = 0;
   let p2score = 0;
   localStorage.setItem("p1score", p1score);
@@ -26,9 +18,10 @@ function Controller() {
       localStorage.setItem("p2score", p2score);
     }
   }
+  
 
   const Show_MU = () => {
-    setGM(localStorage.getItem("gm"));
+    GM = localStorage.getItem("gm");
     switch (GM) {
       case "D":
         localStorage.setItem("ScoreboardType", "doublestart");
@@ -43,6 +36,7 @@ function Controller() {
         }, 5000);
         break;
       default:
+        localStorage.setItem("ScoreboardType", "h");
         break;
     }
   };
@@ -50,7 +44,6 @@ function Controller() {
   return (
     <>
       <div className="UI_Contain">
-        <button onClick={handleopenTagSet}>Enter Player Tags</button>
 
         <button onClick={() => Show_MU()}>Show Matchup</button>
 
@@ -59,7 +52,7 @@ function Controller() {
         <button onClick={() => score(2, 1)}>Win Right</button>
         <button onClick={() => score(2, -1)}>Undo</button>
 
-        {ShowTagSet && <Names onClose={handlecloseTagSet} />}
+        <Names/>
       </div>
     </>
   );

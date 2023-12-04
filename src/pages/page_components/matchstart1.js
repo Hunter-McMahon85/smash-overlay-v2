@@ -8,7 +8,24 @@ const MatchStart1 = ({
   rname, 
   pool 
 }) => {
-  return <></>;
+  return (
+    <>
+    <div className="singlecontain">
+     
+      <h1>{P1}</h1>
+      <h1>{Pro1}</h1>
+      
+      <h1>VS.</h1>
+      
+      <h1>{P2}</h1>
+      <h1>{Pro2}</h1>
+      
+  
+      <h1>{rname}</h1>
+      <h1>{pool}</h1>
+    </div>
+    </>
+    );
 };
 
 export default MatchStart1;

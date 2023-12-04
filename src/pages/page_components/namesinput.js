@@ -4,7 +4,7 @@ import "react-autocomplete-input/dist/bundle.css";
 import entered_name from "./charnames";
 import names_list_in_files from "./charfilenames";
 
-function Names({ onClose }) {
+function Names() {
   // hell but neccessary
   const [Char11_a, setChar11_a] = useState("");
   const [Char11_arr, setChar11_arr] = useState([
@@ -120,7 +120,7 @@ function Names({ onClose }) {
             "/charicons/" + names_list_in_files[index][6],
             "/charicons/" + names_list_in_files[index][7],
           ]);
-          Update_Icon(0, 11);
+
           break;
         case 12:
           setChar12_arr([
@@ -133,7 +133,7 @@ function Names({ onClose }) {
             "/charicons/" + names_list_in_files[index][6],
             "/charicons/" + names_list_in_files[index][7],
           ]);
-          Update_Icon(0, 12);
+
           break;
         case 21:
           setChar21_arr([
@@ -146,7 +146,7 @@ function Names({ onClose }) {
             "/charicons/" + names_list_in_files[index][6],
             "/charicons/" + names_list_in_files[index][7],
           ]);
-          Update_Icon(0, 21);
+
           break;
         case 22:
           setChar22_arr([
@@ -159,7 +159,7 @@ function Names({ onClose }) {
             "/charicons/" + names_list_in_files[index][6],
             "/charicons/" + names_list_in_files[index][7],
           ]);
-          Update_Icon(0, 22);
+
           break;
         default:
           break;
@@ -209,7 +209,7 @@ function Names({ onClose }) {
 
   const GMode = (x) => {
     localStorage.setItem("gm", x);
-  }
+  };
 
   function HandleEntry() {
     if (P11 !== "") {
@@ -218,7 +218,7 @@ function Names({ onClose }) {
     if (P12 !== "") {
       localStorage.setItem("p12", P12);
     }
-    if (P22 !== "") {
+    if (P21 !== "") {
       localStorage.setItem("p21", P21);
     }
     if (P22 !== "") {
@@ -261,6 +261,7 @@ function Names({ onClose }) {
 
       <button onClick={() => GMode("D")}>Doubles</button>
       <button onClick={() => GMode("S")}>Singles</button>
+      <button onClick={() => GMode("H")}>Hide</button>
 
       <h2>Player Tags</h2>
       <h3>Player/Duo 1:</h3>
@@ -553,7 +554,6 @@ function Names({ onClose }) {
 
       <button onClick={HandleEntry()}>Enter</button>
       <br></br>
-      <button onClick={onClose}>Close</button>
     </>
   );
 }
