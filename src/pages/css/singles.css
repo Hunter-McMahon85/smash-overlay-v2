@@ -1,0 +1,10 @@
+.singlecontain {
+    width: 100vw;
+    height: 100vh;
+}
+
+.singleoverlay {
+    display: flex;
+    height: 70px;
+    width: 100vw;
+}

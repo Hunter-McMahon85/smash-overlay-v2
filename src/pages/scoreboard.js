@@ -25,6 +25,7 @@ function Scoreboard() {
   const [RoundName, setRoundName] = useState("");
   const [PoolName, setPoolName] = useState("");
   const [ScoreType, setScoreType] = useState("");
+  const [PrevScoreType, setPrevScoreType] = useState("");
 
   const [ScoreBug, setScoreBug] = useState("");
 
@@ -49,80 +50,80 @@ function Scoreboard() {
     setRoundName(localStorage.getItem("round"));
     setPoolName(localStorage.getItem("pool"));
 
+    setPrevScoreType(ScoreType);
     setScoreType(localStorage.getItem("ScoreboardType"));
-    
-    switch (ScoreType) {
-      case "single":
-        setScoreBug(
-          <ScoreboardSingle
-            P1={P11}
-            P2={P21}
-            Pro1={Pronoun11}
-            Pro2={Pronoun21}
-            C1={Char11}
-            C2={Char21}
-            S1={P1Score}
-            S2={P2Score}
-            rname={RoundName}
-            pool={PoolName}
-          />
-        );
-        break;
-      case "double":
-        setScoreBug(
-          <ScoreboardDuo
-            P11={P11}
-            P12={P12}
-            P21={P21}
-            P22={P22}
-            Pro11={Pronoun11}
-            Pro12={Pronoun12}
-            Pro21={Pronoun21}
-            Pro22={Pronoun22}
-            C11={Char11}
-            C12={Char12}
-            C21={Char21}
-            C22={Char22}
-            S1={P1Score}
-            S2={P2Score}
-            rname={RoundName}
-            pool={PoolName}
-          />
-        );
-        break;
-      case "singlestart":
-        setScoreBug(
-          <MatchStart1
-            P1={P11}
-            P2={P21}
-            Pro1={Pronoun11}
-            Pro2={Pronoun21}
-            rname={RoundName}
-            pool={PoolName}
-          />
-        );
-        break;
-      case "doublestart":
-        setScoreBug(
-          <MatchStart2
-            P11={P11}
-            P12={P12}
-            P21={P21}
-            P22={P22}
-            Pro11={Pronoun11}
-            Pro12={Pronoun12}
-            Pro21={Pronoun21}
-            Pro22={Pronoun22}
-            rname={RoundName}
-            pool={PoolName}
-          />
-        );
-        break;
-      default:
-        setScoreBug(
-          <></>
-        )
-        break;
+    if (ScoreType !== PrevScoreType) {
+      switch (ScoreType) {
+        case "single":
+          setScoreBug(
+            <ScoreboardSingle
+              P1={P11}
+              P2={P21}
+              Pro1={Pronoun11}
+              Pro2={Pronoun21}
+              C1={Char11}
+              C2={Char21}
+              S1={P1Score}
+              S2={P2Score}
+              rname={RoundName}
+              pool={PoolName}
+            />
+          );
+          break;
+        case "double":
+          setScoreBug(
+            <ScoreboardDuo
+              P11={P11}
+              P12={P12}
+              P21={P21}
+              P22={P22}
+              Pro11={Pronoun11}
+              Pro12={Pronoun12}
+              Pro21={Pronoun21}
+              Pro22={Pronoun22}
+              C11={Char11}
+              C12={Char12}
+              C21={Char21}
+              C22={Char22}
+              S1={P1Score}
+              S2={P2Score}
+              rname={RoundName}
+              pool={PoolName}
+            />
+          );
+          break;
+        case "singlestart":
+          setScoreBug(
+            <MatchStart1
+              P1={P11}
+              P2={P21}
+              Pro1={Pronoun11}
+              Pro2={Pronoun21}
+              rname={RoundName}
+              pool={PoolName}
+            />
+          );
+          break;
+        case "doublestart":
+          setScoreBug(
+            <MatchStart2
+              P11={P11}
+              P12={P12}
+              P21={P21}
+              P22={P22}
+              Pro11={Pronoun11}
+              Pro12={Pronoun12}
+              Pro21={Pronoun21}
+              Pro22={Pronoun22}
+              rname={RoundName}
+              pool={PoolName}
+            />
+          );
+          break;
+        default:
+          setScoreBug(<></>);
+          break;
+      }
     }
   };
 

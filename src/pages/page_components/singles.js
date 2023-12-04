@@ -13,22 +13,24 @@ const ScoreboardSingle = ({
   pool,
 }) => {
   return (
-  <>
-  <div className="singlecontain">
-    <img src={process.env.PUBLIC_URL + C1} alt="" />
-    <h1>{P1}</h1>
-    <h1>{Pro1}</h1>
-    <h1>{S1}</h1>
-    
-    <img src={process.env.PUBLIC_URL + C2} alt="" />
-    <h1>{P2}</h1>
-    <h1>{Pro2}</h1>
-    <h1>{S2}</h1>
+    <>
+      <div className="singlecontain">
+        <div className="singleoverlay">
+          <img src={process.env.PUBLIC_URL + C1} alt="" />
+          <h1>{P1}</h1>
+          <h1>{Pro1}</h1>
+          <h1>{S1}</h1>
 
-    <h1>{rname}</h1>
-    <h1>{pool}</h1>
-  </div>
-  </>
+          <img src={process.env.PUBLIC_URL + C2} alt="" />
+          <h1>{P2}</h1>
+          <h1>{Pro2}</h1>
+          <h1>{S2}</h1>
+
+          <h1>{rname}</h1>
+          <h1>{pool}</h1>
+        </div>
+      </div>
+    </>
   );
 };
 
