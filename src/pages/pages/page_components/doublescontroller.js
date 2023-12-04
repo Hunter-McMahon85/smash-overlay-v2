@@ -1,10 +1,10 @@
 import React from "react";
 
-function ScoreboardSingle() {
+function DuoControl() {
   return (
    <>
    </>
   );
 }
 
-export default ScoreboardSingle;
+export default DuoControl;
