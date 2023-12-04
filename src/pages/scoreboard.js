@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ScoreboardSingle from "./page components/singles";
-import ScoreboardDuo from "./page components/doubles";
-import MatchStart1 from "./page components/matchstart1";
-import MatchStart2 from "./page components/matchstart2";
+import ScoreboardSingle from "./page_components/singles";
+import ScoreboardDuo from "./page_components/doubles";
+import MatchStart1 from "./page_components/matchstart1";
+import MatchStart2 from "./page_components/matchstart2";
 
 function Scoreboard() {
   const [P11, setP11] = useState("");
