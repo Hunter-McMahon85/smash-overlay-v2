@@ -24,8 +24,7 @@ function Scoreboard() {
   const [P2Score, setP2Score] = useState(0);
   const [RoundName, setRoundName] = useState("");
   const [PoolName, setPoolName] = useState("");
-
-  let ScoreType = localStorage.getItem("ScoreboardType");
+  const [ScoreType, setScoreType] = useState("");
 
   const reload = () => {
     setP11(localStorage.getItem("p11"));
@@ -48,7 +47,7 @@ function Scoreboard() {
     setRoundName(localStorage.getItem("round"));
     setPoolName(localStorage.getItem("pool"));
 
-    ScoreType = localStorage.getItem("ScoreboardType");
+    setScoreType(localStorage.getItem("ScoreboardType"));
   };
 
   useEffect(() => {
@@ -113,7 +112,7 @@ function Scoreboard() {
         />
       );
       break;
-    case "double start":
+    case "doublestart":
       Scorebug = (
         <MatchStart2
           P11={P11}

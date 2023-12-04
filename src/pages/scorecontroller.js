@@ -3,6 +3,7 @@ import Names from "./page_components/namesinput";
 
 function Controller() {
   const [ShowTagSet, setTagSet] = useState(false);
+  const [GM, setGM] = useState("");
 
   const handleopenTagSet = () => {
     setTagSet(true);
@@ -26,10 +27,32 @@ function Controller() {
     }
   }
 
+  const Show_MU = () => {
+    setGM(localStorage.getItem("gm"));
+    switch (GM) {
+      case "D":
+        localStorage.setItem("ScoreboardType", "doublestart");
+        setTimeout(() => {
+          localStorage.setItem("ScoreboardType", "double");
+        }, 5000);
+        break;
+      case "S":
+        localStorage.setItem("ScoreboardType", "singlestart");
+        setTimeout(() => {
+          localStorage.setItem("ScoreboardType", "single");
+        }, 5000);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <>
       <div className="UI_Contain">
         <button onClick={handleopenTagSet}>Enter Player Tags</button>
+
+        <button onClick={() => Show_MU()}>Show Matchup</button>
 
         <button onClick={() => score(1, 1)}>Win Left</button>
         <button onClick={() => score(1, -1)}>Undo</button>
