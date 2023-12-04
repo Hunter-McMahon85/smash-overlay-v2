@@ -1,19 +1,17 @@
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
 
-function landing() {
+const Landing = () => {
   return (
     <>
-      <div class="container">
-        <Link to="/scoreboard">
+      <Link to="/scoreboard">
           <button>Open Scoreboard</button>
         </Link>
         <Link to="/controller">
           <button>Open Controller</button>
         </Link>
-      </div>
     </>
   );
 }
 
-export default landing;
+export default Landing;
