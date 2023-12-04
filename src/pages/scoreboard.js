@@ -55,20 +55,7 @@ function Scoreboard() {
     if (ScoreType !== PrevScoreType) {
       switch (ScoreType) {
         case "single":
-          setScoreBug(
-            <ScoreboardSingle
-              P1={P11}
-              P2={P21}
-              Pro1={Pronoun11}
-              Pro2={Pronoun21}
-              C1={Char11}
-              C2={Char21}
-              S1={P1Score}
-              S2={P2Score}
-              rname={RoundName}
-              pool={PoolName}
-            />
-          );
+          setScoreBug(<ScoreboardSingle />);
           break;
         case "double":
           setScoreBug(
