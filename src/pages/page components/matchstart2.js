@@ -1,6 +1,6 @@
 import React from "react";
 
-const ScoreboardDuo = ({
+const MatchStart2 = ({
   P11,
   P12,
   P21,
@@ -9,16 +9,10 @@ const ScoreboardDuo = ({
   Pro12,
   Pro21,
   Pro22,
-  C11,
-  C12,
-  C21,
-  C22,
-  S1,
-  S2,
   rname,
   pool,
 }) => {
   return <></>;
 };
 
-export default ScoreboardDuo;
+export default MatchStart2;

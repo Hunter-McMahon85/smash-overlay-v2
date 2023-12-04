@@ -1,10 +1,18 @@
 import React from "react";
 
-function Scoreboard() {
-  return (
-   <>
-   </>
-  );
-}
+const ScoreboardSingle = ({
+  P1,
+  P2,
+  Pro1,
+  Pro2,
+  C1,
+  C2,
+  S1,
+  S2,
+  rname,
+  pool,
+}) => {
+  return <></>;
+};
 
-export default Scoreboard;
+export default ScoreboardSingle;
