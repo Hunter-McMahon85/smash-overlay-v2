@@ -7,6 +7,9 @@ const Landing = () => {
       <Link to="/scoreboard">
           <button>Open Scoreboard</button>
         </Link>
+        <Link to="/coms">
+          <button>Comentator Overlay</button>
+        </Link>
         <Link to="/controller">
           <button>Open Controller</button>
         </Link>

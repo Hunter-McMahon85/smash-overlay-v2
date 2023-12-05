@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/ms1.css";
 
 const MatchStart1 = () => {
-  const [isAnimated, setIsAnimated] = useState(false);
+  const [isSlide, setSlide] = useState(true);
   const [P11, setP11] = useState("");
   const [P21, setP21] = useState("");
 
@@ -24,31 +24,37 @@ const MatchStart1 = () => {
   };
 
   useEffect(() => {
-    // Trigger animation after component is mounted
-    setIsAnimated(true);
-
     reload();
-    const interval = setInterval(reload, 1);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [isAnimated]);
+
+    // Trigger animation after component is mounted
+    setSlide(true);
+  }, [isSlide]);
 
   return (
     <>
       <div className="ms1">
-        <div className="mu1contiain">
+        <div className={`mu1contain ${isSlide ? "slide-right" : ""}`}>
           <h1 className="mu1round">{RoundName}</h1>
           <h1 className="mu1pool">{PoolName}</h1>
-          <div className="mu1VS">
-            <img src={process.env.PUBLIC_URL + Char11} alt="" />
-            <h1>{P11}</h1>
-            
 
-            <h1 className="VS">VS.</h1>
+          <div className="mu1VS">
+            <img
+              src={process.env.PUBLIC_URL + Char11}
+              width="64"
+              height="64"
+              alt=""
+            />
+            <h1>{P11}</h1>
+
+            <h1 className="vsText">VS.</h1>
 
             <h1>{P21}</h1>
-            <img src={process.env.PUBLIC_URL + Char21} alt="" />
+            <img
+              src={process.env.PUBLIC_URL + Char21}
+              width="64"
+              height="64"
+              alt=""
+            />
           </div>
         </div>
       </div>
