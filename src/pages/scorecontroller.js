@@ -25,15 +25,15 @@ function Controller() {
     switch (GM) {
       case "D":
         localStorage.setItem("ScoreboardType", "doublestart");
-        setTimeout(() => {
+        /*setTimeout(() => {
           localStorage.setItem("ScoreboardType", "double");
-        }, 5000);
+        }, 6000);*/
         break;
       case "S":
         localStorage.setItem("ScoreboardType", "singlestart");
-        setTimeout(() => {
+        /*setTimeout(() => {
           localStorage.setItem("ScoreboardType", "single");
-        }, 5000);
+        }, 6000);*/
         break;
       default:
         localStorage.setItem("ScoreboardType", "h");

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/singles.css";
 
-const ScoreboardSingle = ({}) => {
+const ScoreboardSingle = () => {
   //this has to be done in every function because of the way conditional rendering is handled in scoreboard.js
   const [isAnimated, setIsAnimated] = useState(false);
   const [P11, setP11] = useState("");
@@ -51,6 +51,7 @@ const ScoreboardSingle = ({}) => {
             height="64"
             width="64"
             alt=""
+            className="logo"
           />
           <img src={process.env.PUBLIC_URL + Char11} alt="" />
           <h1 className="tag">{P11}</h1>
