@@ -68,6 +68,27 @@ function Names() {
   const [RoundName, setRoundName] = useState("");
   const [PoolName, setPoolName] = useState("");
 
+  const [Commie1, setCommie1] = useState("");
+  const [Commie2, setCommie2] = useState("");
+  const [Commie1p, setCommie1p] = useState("");
+  const [Commie2p, setCommie2p] = useState("");
+
+  const handlecommie1 = (event) => {
+    setCommie1(event.target.value);
+  };
+
+  const handlecommie2 = (event) => {
+    setCommie2(event.target.value);
+  };
+
+  const handlecommie1p = (event) => {
+    setCommie1p(event.target.value);
+  };
+
+  const handlecommie2p = (event) => {
+    setCommie2p(event.target.value);
+  };
+
   const handleP11a = (event) => {
     setChar11_a(event);
   };
@@ -241,6 +262,18 @@ function Names() {
     }
     if (PoolName !== "") {
       localStorage.setItem("pool", PoolName);
+    }
+    if (Commie1 !== "") {
+      localStorage.setItem("commie1", Commie1);
+    }
+    if (Commie2 !== "") {
+      localStorage.setItem("commie2", Commie2);
+    }
+    if (Commie1p !== "") {
+      localStorage.setItem("commiep1", Commie1p);
+    }
+    if (Commie2p !== "") {
+      localStorage.setItem("commiep2", Commie2p);
     }
   }
   return (
@@ -554,6 +587,34 @@ function Names() {
 
       <button onClick={HandleEntry()}>Enter</button>
       <br></br>
+
+      <input
+        type="text"
+        value={Commie1}
+        placeholder="commie1"
+        onChange={handlecommie1}
+      />
+
+      <input
+        type="text"
+        value={Commie1p}
+        placeholder="commie1 pronoun"
+        onChange={handlecommie1p}
+      />
+
+      <input
+        type="text"
+        value={Commie2}
+        placeholder="commie2"
+        onChange={handlecommie2}
+      />
+
+      <input
+        type="text"
+        value={Commie2p}
+        placeholder="commie2 pronoun"
+        onChange={handlecommie2p}
+      />
     </>
   );
 }
