@@ -18,6 +18,13 @@ function Controller() {
       localStorage.setItem("p2score", p2score);
     }
   }
+
+  function reset_scores() {
+    p1score = 0;
+    p2score = 0;
+    localStorage.setItem("p1score", p1score);
+    localStorage.setItem("p2score", p2score);
+  }
   
 
   const Show_MU = () => {
@@ -45,12 +52,13 @@ function Controller() {
     <>
       <div className="UI_Contain">
 
-        <button onClick={() => Show_MU()}>Show Matchup</button>
-
         <button onClick={() => score(1, 1)}>Win Left</button>
-        <button onClick={() => score(1, -1)}>Undo</button>
+        <br/>
         <button onClick={() => score(2, 1)}>Win Right</button>
-        <button onClick={() => score(2, -1)}>Undo</button>
+        <br/>
+        <button onClick={() => reset_scores()}>Reset Score</button>
+        <br/>
+        <button onClick={() => Show_MU()}>Show Matchup</button>
 
         <Names/>
       </div>
