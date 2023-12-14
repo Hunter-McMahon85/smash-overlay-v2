@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/smash-overlay-v2/static/css/main.f3637ff8.css",
-    "main.js": "/smash-overlay-v2/static/js/main.b32a7b17.js",
+    "main.css": "/smash-overlay-v2/static/css/main.ef0732cc.css",
+    "main.js": "/smash-overlay-v2/static/js/main.a53f633e.js",
     "static/js/787.3ebb3b79.chunk.js": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js",
-    "static/media/vs.jpg": "/smash-overlay-v2/static/media/vs.f71551b97564813dd984.jpg",
     "index.html": "/smash-overlay-v2/index.html",
-    "main.f3637ff8.css.map": "/smash-overlay-v2/static/css/main.f3637ff8.css.map",
-    "main.b32a7b17.js.map": "/smash-overlay-v2/static/js/main.b32a7b17.js.map",
+    "main.ef0732cc.css.map": "/smash-overlay-v2/static/css/main.ef0732cc.css.map",
+    "main.a53f633e.js.map": "/smash-overlay-v2/static/js/main.a53f633e.js.map",
     "787.3ebb3b79.chunk.js.map": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3637ff8.css",
-    "static/js/main.b32a7b17.js"
+    "static/css/main.ef0732cc.css",
+    "static/js/main.a53f633e.js"
   ]
 }
