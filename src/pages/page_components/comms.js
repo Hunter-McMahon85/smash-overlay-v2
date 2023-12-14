@@ -30,12 +30,12 @@ const Comms = () => {
 
   return (
     <>
-      <div className={`singlecontain ${isAnimated ? "slide-in" : ""}`}>
-        <div className="singleoverlay">
+      <div className={`commiecontain ${isAnimated ? "slide-in" : ""}`}>
+        <div className="commieoverlay">
           <img
             src={process.env.PUBLIC_URL + "/logo.jpg"}
-            height="64"
-            width="64"
+            height="128"
+            width="128"
             alt=""
             className="logo"
           />
