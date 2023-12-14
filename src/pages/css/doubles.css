@@ -9,6 +9,7 @@
   /* Set transition for smooth animation */
   transition: transform 1s ease-in-out;
 }
+
 /* Add a class to trigger the animation */
 .slide-in {
   /* Move to the original position (0%) */
@@ -19,20 +20,21 @@
   from {
     transform: translatey(-100%);
   }
+
   to {
     transform: translatey(0);
   }
 }
 
 .doubleoverlay {
-  max-width: 100vw;
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   font-family: "futura-pt", sans-serif;
   font-weight: 800;
-  background-color: #89010f;
-  border: white solid 3px;
+
 }
 
 .doubleoverlay h1 {
@@ -41,48 +43,76 @@
   margin-bottom: 0;
 }
 
-.doubleitemscontain img {
-  width: 13%;
-  height: 64px;
-}
-
-.doubletag {
-  width: 30%;
+.gamer2 {
+  display: flex;
+  align-items: center;
+  border: black solid 3px;
+  background-color: #5EAE33;
   color: white;
 }
 
-.doublsscore {
-  font-size: 42px;
-  width: 4%;
-  margin-right: 10px;
-  padding: 17px 0px;
-  background-color: #fe917f;
+.gamer2 h1 {
+  font-size: larger;
+}
+
+.tag2 {
+  width: 25%;
+}
+
+.score2 {
+  width: 6%;
+  padding: 13px 0px;
   text-align: center;
-  min-height: 100%;
-  border-right:  white solid 3px;
-  border-left:  white solid 3px;
+  height: fit-content;
+  color: black;
+  background-color: yellow;
+  border-left: black solid 3px;
 }
 
-.doublepronoun {
-  width: 36%;
+.pronoun2 {
+  width: 12%;
   text-align: center;
-  padding-top: 5px;
   font-size: x-large;
+  margin-right: 1%;
 }
 
-.doublepool {
-  margin-left: 20px;
-  font-size: x-large;
+h4 {
+  margin: 0;
+  text-align: center;
 }
 
-
-.duo {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+.diamond-shape {
+  background: yellow;
+  height: 124px;
+  text-align: center;
+  transform:rotate(45deg);
+	width:128px;
+  border: black solid 3px;
+}
+.item-count {
+  color: #333;
+  display: table-cell;
+  height: 128px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+	width:128px;
 }
 
-.doublename {
-  width: 60%;
-  margin-left: 5px;
+.gamers2 {
+  width: 50%;
+  margin-left: -5%;
+  border: black solid 3px;
+  border-radius: 10px;
 }
+
+.gamer2 img {
+  width: 50px;
+  height: 50px;
+}
+
+.lefticon {
+  margin-left: 11%;
+  width: 50px;
+  height: 50px;
+}
+

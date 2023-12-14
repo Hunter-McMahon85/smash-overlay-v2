@@ -51,7 +51,7 @@ const ScoreboardDuo = () => {
     // Trigger animation after component is mounted
     setIsAnimated(true);
     reload();
-    
+
     return () => {
       clearInterval(interval);
     };
@@ -61,63 +61,41 @@ const ScoreboardDuo = () => {
     <>
       <div className={`doublecontain ${isAnimated ? "slide-in" : ""}`}>
         <div className="doubleoverlay">
-          <img
-            src={process.env.PUBLIC_URL + "/logo.jpg"}
-            height="88"
-            width="88"
-            alt=""
-            className="logo"
-          />
-          <div class="doubletag">
-            <div class="duo">
-              <img
-                src={process.env.PUBLIC_URL + C11}
-                height="32"
-                width="32"
-                alt=""
-              />
-              <h1 className="doublename">{P11}</h1>
-              <h1 className="doublepronoun">{Pro11}</h1>
-            </div>
-            <div class="duo">
-              <img
-                src={process.env.PUBLIC_URL + C12}
-                height="32"
-                width="32"
-                alt=""
-              />
-              <h1 className="doublename">{P12}</h1>
-              <h1 className="doublepronoun">{Pro12}</h1>
+
+          <div class="container diamond-shape">
+            <div class="item-count">
+              <h4>{Rname}</h4>
+              <h4 className="pool">{Pool}</h4>
             </div>
           </div>
-          <h1 className="doublsscore">{S1}</h1>
 
-          <div class="doubletag">
-            <div class="duo">
-              <img
-                src={process.env.PUBLIC_URL + C21}
-                height="32"
-                width="32"
-                alt=""
-              />
-              <h1 className="doublename">{P21}</h1>
-              <h1 className="doublepronoun">{Pro21}</h1>
+          <div className="gamers2">
+            <div className="gamer2">
+              <img className="lefticon" src={process.env.PUBLIC_URL + C11} alt="" />
+              <h1 className="tag2">{P11}</h1>
+              <h1 className="pronoun2">{Pro11}</h1>
+
+
+              <img src={process.env.PUBLIC_URL + C12} alt="" />
+              <h1 className="tag2">{P12}</h1>
+              <h1 className="pronoun2">{Pro12}</h1>
+
+              <h1 className="score2">{S1}</h1>
             </div>
-            <div class="duo">
-              <img
-                src={process.env.PUBLIC_URL + C22}
-                height="32"
-                width="32"
-                alt=""
-              />
-              <h1 className="doublename">{P22}</h1>
-              <h1 className="doublepronoun">{Pro22}</h1>
+            <div className="gamer2">
+              <img className="lefticon" src={process.env.PUBLIC_URL + C21} alt="" />
+              <h1 className="tag2">{P21}</h1>
+              <h1 className="pronoun2">{Pro21}</h1>
+
+
+              <img src={process.env.PUBLIC_URL + C22} alt="" />
+              <h1 className="tag2">{P22}</h1>
+              <h1 className="pronoun2">{Pro22}</h1>
+
+              <h1 className="score2">{S2}</h1>
             </div>
           </div>
-          <h1 className="doublsscore">{S2}</h1>
 
-          <h1 className="doubleround">{Rname}</h1>
-          <h1 className="doublepool">{Pool}</h1>
         </div>
       </div>
     </>

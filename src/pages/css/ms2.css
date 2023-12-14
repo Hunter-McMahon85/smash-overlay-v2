@@ -21,9 +21,9 @@
   align-items: center;
   width: 90%;
   height: 70%;
-  background-image: url("/public/vs.jpg");
+  background-color: #5EAE33;
   border-radius: 25px;
-  border: white solid 5px;
+  border: white double 10px;
   color: white;
   overflow: hidden;
   /* Set initial position to top of the screen */

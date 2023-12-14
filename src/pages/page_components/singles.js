@@ -46,27 +46,29 @@ const ScoreboardSingle = () => {
     <>
       <div className={`singlecontain ${isAnimated ? "slide-in" : ""}`}>
         <div className="singleoverlay">
-          <img
-            src={process.env.PUBLIC_URL + "/logo.jpg"}
-            height="64"
-            width="64"
-            alt=""
-            className="logo"
-          />
-          <img src={process.env.PUBLIC_URL + Char11} alt="" />
-          <h1 className="tag">{P11}</h1>
-          <h1 className="pronoun">{Pronoun11}</h1>
-          <h1 className="score">{P1Score}</h1>
+          <div class="container diamond-shape">
+            <div class="item-count">
+              <h4>{RoundName}</h4>
+              <h4 className="pool">{PoolName}</h4>
+            </div>
+          </div>
+          <div className="gamers">
+            <div className="gamer">
+              <img src={process.env.PUBLIC_URL + Char11} alt="" />
+              <h1 className="tag">{P11}</h1>
+              <h1 className="pronoun">{Pronoun11}</h1>
+              <h1 className="score">{P1Score}</h1>
+            </div>
+            <div className="gamer">
+              <img src={process.env.PUBLIC_URL + Char21} alt="" />
+              <h1 className="tag">{P21}</h1>
+              <h1 className="pronoun">{Pronoun21}</h1>
+              <h1 className="score">{P2Score}</h1>
+            </div>
+          </div>
 
-          <img src={process.env.PUBLIC_URL + Char21} alt="" />
-          <h1 className="tag">{P21}</h1>
-          <h1 className="pronoun">{Pronoun21}</h1>
-          <h1 className="score">{P2Score}</h1>
-
-          <h1>{RoundName}</h1>
-          <h1 className="pool">{PoolName}</h1>
         </div>
-      </div>
+      </div >
     </>
   );
 };

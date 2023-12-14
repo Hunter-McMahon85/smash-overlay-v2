@@ -9,6 +9,7 @@
   /* Set transition for smooth animation */
   transition: transform 1s ease-in-out;
 }
+
 /* Add a class to trigger the animation */
 .slide-in {
   /* Move to the original position (0%) */
@@ -19,6 +20,7 @@
   from {
     transform: translatey(-100%);
   }
+
   to {
     transform: translatey(0);
   }
@@ -26,14 +28,13 @@
 
 .singleoverlay {
   display: flex;
-  max-width: 100vw;
+  width: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   font-family: "futura-pt", sans-serif;
   font-weight: 800;
-  font-size: large;
-  background-color: #89010f;
-  border: white solid 3px;
+
 }
 
 .singleoverlay h1 {
@@ -42,38 +43,70 @@
   margin-bottom: 0;
 }
 
-.itemscontain img {
-  width: 4.45%;
-  height: 64px;
-}
-
-.tag {
-  width: 20%;
+.gamer {
+  display: flex;
+  align-items: center;
+  border: black solid 3px;
+  background-color: #5EAE33;
   color: white;
 }
 
+.gamer h1 {
+  font-size: larger;
+}
+
+.tag {
+  width: 53%;
+}
+
 .score {
-  width: 3%;
-  margin-right: 10px;
-  padding: 8px 0px;
-  background-color: #fe917f;
+  width: 10%;
+  padding: 11px 0px;
   text-align: center;
   height: fit-content;
-  border-right:  white solid 3px;
-  border-left:  white solid 3px;
+  color: black;
+  background-color: yellow;
+  border-left: black solid 3px;
 }
 
 .pronoun {
-  width: 8%;
+  width: 17%;
   text-align: center;
   font-size: x-large;
 }
 
-.pool {
-  margin-left: 20px;
-  font-size: x-large;
+h4 {
+  margin: 0;
+  text-align: center;
 }
 
-.logo {
-  border-right:  white solid 3px;
+.diamond-shape {
+  background: yellow;
+  height: 124px;
+  text-align: center;
+  transform:rotate(45deg);
+	width:128px;
+  border: black solid 3px;
 }
+.item-count {
+  color: #333;
+  display: table-cell;
+  height: 128px;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+	width:128px;
+}
+
+.gamers {
+  width: 40%;
+  margin-left: -5%;
+  border: black solid 3px;
+  border-radius: 10px;
+}
+
+.gamer img {
+  margin-left: 13%;
+  width: 50px;
+  height: 50px;
+}
+
