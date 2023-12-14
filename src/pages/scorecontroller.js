@@ -1,9 +1,10 @@
 import React from "react";
 import Names from "./page_components/namesinput";
+import "./css/control.css"
 
 function Controller() {
   let GM = "";
-  
+
   let p1score = 0;
   let p2score = 0;
   localStorage.setItem("p1score", p1score);
@@ -25,7 +26,7 @@ function Controller() {
     localStorage.setItem("p1score", p1score);
     localStorage.setItem("p2score", p2score);
   }
-  
+
 
   const Show_MU = () => {
     GM = localStorage.getItem("gm");
@@ -51,16 +52,17 @@ function Controller() {
   return (
     <>
       <div className="UI_Contain">
+        <div className="scoring">
+          <button onClick={() => score(1, 1)}>Win Top</button>
 
-        <button onClick={() => score(1, 1)}>Win Left</button>
-        <br/>
-        <button onClick={() => score(2, 1)}>Win Right</button>
-        <br/>
-        <button onClick={() => reset_scores()}>Reset Score</button>
-        <br/>
+          <button onClick={() => score(2, 1)}>Win Bottom</button>
+
+          <button onClick={() => reset_scores()}>Reset Score</button>
+        </div>
+        <h2>Round INFO</h2>
         <button onClick={() => Show_MU()}>Show Matchup</button>
-
-        <Names/>
+        <br />
+        <Names />
       </div>
     </>
   );

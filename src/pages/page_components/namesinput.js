@@ -403,9 +403,9 @@ function Names() {
 
   return (
     <>
-      <h2>Round INFO</h2>
+
       <button onClick={() => GMode("D")}>Doubles</button>
-      <br />
+
       <button onClick={() => GMode("S")}>Singles</button>
       <br />
       <button onClick={() => GMode("H")}>Hide</button>
@@ -734,9 +734,6 @@ function Names() {
         />
       </div>
 
-      <button onClick={HandleEntry()}>Enter</button>
-      <br></br>
-
       <input
         type="text"
         value={Commie1}
@@ -764,6 +761,8 @@ function Names() {
         placeholder="commie2 pronoun"
         onChange={handlecommie2p}
       />
+      <br></br>
+      <button onClick={HandleEntry()}>Enter</button>
     </>
   );
 }
