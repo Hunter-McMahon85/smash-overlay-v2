@@ -1,4 +1,4 @@
-import React,  { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/commie.css";
 
 const Comms = () => {
@@ -7,7 +7,7 @@ const Comms = () => {
   const [Commie2, setCommie2] = useState("");
   const [Commiep1, setCommiep1] = useState("");
   const [Commiep2, setCommiep2] = useState("");
-  
+
 
   const reload = () => {
     setCommie1(localStorage.getItem("commie1"));
@@ -30,27 +30,25 @@ const Comms = () => {
 
   return (
     <>
-      <div className={`commiecontain ${isAnimated ? "slide-in" : ""}`}>
-        <div className="commieoverlay">
-          <img
-            src={process.env.PUBLIC_URL + "/logo.jpg"}
-            height="128"
-            width="128"
-            alt=""
-            className="logo"
-          />
-          <h1 className="commietxt">Commentators:</h1>
-          
-          <h1 className="commietag">{Commie1}</h1>
-          <h1 className="commiepronoun">{Commiep1}</h1>
-          
-          <h1 className="commietag">{Commie2}</h1>
-          <h1 className="commiepronoun">{Commiep2}</h1>
-          
+      <div className={`comcontain ${isAnimated ? "slide-in" : ""}`}>
+        <div className="comoverlay">
+          <div className="coml">
+            <h1 className="cpronoun">{Commiep1}</h1>
+            <h1 className="ctagl">{Commie1}</h1>
+          </div>
 
-      
+          <div class="comcontainer diamond-shape">
+            <div class="comitem-count">
+              <h4>Commentators</h4>
+            </div>
+          </div>
+
+          <div className="comr">
+            <h1 className="ctagr">{Commie2}</h1>
+            <h1 className="cpronoun">{Commiep2}</h1>
+          </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };
