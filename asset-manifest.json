@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/smash-overlay-v2/static/css/main.1005dbac.css",
-    "main.js": "/smash-overlay-v2/static/js/main.1a08ff63.js",
+    "main.css": "/smash-overlay-v2/static/css/main.fd13c8d3.css",
+    "main.js": "/smash-overlay-v2/static/js/main.16bf8f93.js",
     "static/js/787.3ebb3b79.chunk.js": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js",
     "index.html": "/smash-overlay-v2/index.html",
-    "main.1005dbac.css.map": "/smash-overlay-v2/static/css/main.1005dbac.css.map",
-    "main.1a08ff63.js.map": "/smash-overlay-v2/static/js/main.1a08ff63.js.map",
+    "main.fd13c8d3.css.map": "/smash-overlay-v2/static/css/main.fd13c8d3.css.map",
+    "main.16bf8f93.js.map": "/smash-overlay-v2/static/js/main.16bf8f93.js.map",
     "787.3ebb3b79.chunk.js.map": "/smash-overlay-v2/static/js/787.3ebb3b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1005dbac.css",
-    "static/js/main.1a08ff63.js"
+    "static/css/main.fd13c8d3.css",
+    "static/js/main.16bf8f93.js"
   ]
 }
